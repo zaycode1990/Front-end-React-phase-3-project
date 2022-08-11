@@ -34,7 +34,7 @@ function TodoContainer() {
     }
 
     const handleDelete = (todo) => {
-        fetch(`http://localhost:9292/todos/${todo}`
+        fetch(`http://localhost:9292/todos/${todo.id}`
       , {
 
         method: "DELETE",
@@ -44,6 +44,9 @@ function TodoContainer() {
         }
       }
     )
+    .then((res)=>res.json())
+    .then((updatedtodo)=> setUpdatedUserData(updatedtodo))
+    .catch((err) => console.log('error: ', err))
     }
 
 
