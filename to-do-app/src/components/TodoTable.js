@@ -11,7 +11,7 @@ function TodoTable({userData, handlePatch, handleDelete}) {
               <th>Task</th>
               <th>Completed</th>
               <th>Time task was created</th>
-              <th>Checked</th>
+              <th>Done?</th>
               <th>Task Updated</th>
               <th>Delete</th>
             </tr>

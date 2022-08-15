@@ -1,6 +1,6 @@
 import React from 'react'
 import Button from 'react-bootstrap/Button';
-import Table from 'react-bootstrap/Table'
+
 
 function TodoRow({data, handlePatch, handleDelete}) {
 
@@ -14,7 +14,7 @@ function TodoRow({data, handlePatch, handleDelete}) {
     <td>{data.to_dos[0].task}</td>
     <td>{String(data.to_dos[0].completed)}</td>
     <td>{data.to_dos[0].created_at}</td>
-    <td ><Button variant="primary" onClick={() => handlePatch(data.to_dos[0])}>{data.to_dos[0].completed ? "Done" : "Not Done"}</Button></td>
+    <td ><Button variant="primary" onClick={() => handlePatch(data.to_dos[0])}>{data.to_dos[0].completed ? "Not Done" : "Done"}</Button></td>
     <td>{data.to_dos[0].updated_at}</td>
     <td>{data.to_dos[0].completed ? <Button variant="danger" onClick={()=> handleDelete(data.to_dos[0])}>Remove Task</Button> : "Pending Task Removal" } </td>
   </tr>}
