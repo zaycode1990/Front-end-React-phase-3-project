@@ -8,6 +8,7 @@ function TodoTable({userData, handlePatch, handleDelete}) {
           <thead>
             <tr>
               <th>User</th>
+              <th>User Id</th>
               <th>Task</th>
               <th>Completed</th>
               <th>Time task was created</th>

@@ -11,6 +11,7 @@ function TodoRow({data, handlePatch, handleDelete}) {
     <>
    { data.to_dos.length === 0 ? null : <tr>
     <td>{data.name}</td>
+    <td>{data.id}</td>
     <td>{data.to_dos[0].task}</td>
     <td>{String(data.to_dos[0].completed)}</td>
     <td>{data.to_dos[0].created_at}</td>
