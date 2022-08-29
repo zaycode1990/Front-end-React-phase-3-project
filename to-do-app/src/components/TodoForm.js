@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-function TodoForm() {
+function TodoForm({setUpdatedUserData}) {
     const h1Style = {
         textAlign: "center",
         marginTop: "5%",
@@ -18,7 +18,6 @@ function TodoForm() {
       function handleSubmit(e) {
         e.preventDefault()
 
-        console.log("clicked")
         const userData = {
           task,
           userName,
@@ -31,9 +30,10 @@ function TodoForm() {
           },
           body: JSON.stringify(userData),
         })
-        
-    
-     
+        .then((res) => res.json())
+        .then((updatedtodo) => setUpdatedUserData(updatedtodo))
+        .catch((err) => console.log('error: ', err))
+
       }
     
       return (
